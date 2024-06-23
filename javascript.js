@@ -20,3 +20,26 @@ function getComputerChoice() {
    }
 }
 
+//Getting the humans choice.
+function getHumanChoice() {
+   let humanChoice = prompt("Pick up your weapon!"); 
+
+    switch(humanChoice) {
+        case "rock":
+            humanChoice = "rock";
+            return ("Your weapon of choice is Rock!");
+            break;
+        
+        case "paper":
+            humanChoice = "paper";
+            return ("Your weapon of choice is Paper!");
+            break;
+            
+        case "scissors":
+            humanChoice = "scissors";
+            return ("Your weapon of choice is Scissors!");
+            break;
+
+    }
+}
+console.log(getHumanChoice());
