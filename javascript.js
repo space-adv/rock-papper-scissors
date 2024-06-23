@@ -1,18 +1,22 @@
 //Getting the computers choice.
-let getComputerChoice = Math.floor(Math.random() * 3);
-   switch(getComputerChoice) {
+function getComputerChoice() {
+  let computerChoice = Math.floor(Math.random() * 3);
+
+   switch(computerChoice) {
     case 0:
-      getComputerChoice = "Rock";
-      console.log("The computers choice is Rock");
+      computerChoice = "Rock";
+      return ("The computers choice is Rock");
       break;
     
     case 1:
-      getComputerChoice = "Paper";
-      console.log("The computers choice is Paper");
+      computerChoice = "Paper";
+      return ("The computers choice is Paper");
       break;
       
     case 2:
-       getComputerChoice = "Scissors";
-       console.log("The computers choice is Scissors");
+       computerChoice = "Scissors";
+       return ("The computers choice is Scissors");
        break;   
    }
+}
+
