@@ -5,17 +5,17 @@ function getComputerChoice() {
    switch(computerChoice) {
     case 0:
       computerChoice = "rock";
-      return ("The computers choice is Rock");
+      return "rock";
       break;
     
     case 1:
       computerChoice = "paper";
-      return ("The computers choice is Paper");
+      return "paper";
       break;
       
     case 2:
        computerChoice = "scissors";
-       return ("The computers choice is Scissors");
+       return "scissors";
        break;   
    }
 }
@@ -24,35 +24,37 @@ function getComputerChoice() {
 function getHumanChoice() {
    let humanChoice = prompt("Pick up your weapon!"); 
        humanChoice = humanChoice.toLowerCase();
-    switch(humanChoice) {
+
+       switch(humanChoice) {
         case "rock":
             humanChoice = "rock";
-            return ("Your weapon of choice is Rock!");
+            return "rock";
             break;
         
         case "paper":
             humanChoice = "paper";
-            return ("Your weapon of choice is Paper!");
+            return "paper";
             break;
             
         case "scissors":
             humanChoice = "scissors";
-            return ("Your weapon of choice is Scissors!");
+            return "scissors";
             break;
 
         default:
             return prompt("You need to pick one of the three weapons, either Rock, Paper or Scissors.");    
 
-    }
+        }
 }
-console.log(getHumanChoice());
+
 
 //making the players score variables.
 let humanScore = 0;
 let computerScore = 0;
+let result;
 
 function playRound(computerChoice, humanChoice) {
-    let result;
+    
 
     if (computerChoice === humanChoice) {
         result = "It's a draw";
@@ -65,5 +67,17 @@ function playRound(computerChoice, humanChoice) {
     } else {
         result = "The player wins";
     }
-     console.log(result);
+     console.log(result);   
+
+
+    if (result == "The computer wins") {
+        computerScore += 1;
+    } else {
+        humanScore +=1;
+    }
 }
+
+ let humanSelection = getHumanChoice();
+ let computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
