@@ -80,4 +80,21 @@ function playRound(computerChoice, humanChoice) {
  let humanSelection = getHumanChoice();
  let computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+
+ function playGame() {
+    humanScore = 0;
+    computerScore = 0;
+    for(let i = 0; i < 5; i++) {
+        getComputerChoice();
+        getHumanChoice();
+        playRound(humanSelection, computerSelection);
+    } 
+
+    if (computerScore > humanScore) {
+        alert("The computer wins");
+    } else {
+        alert("The player wins");
+    }
+ }
+
+ playGame();
